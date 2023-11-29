@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE TDDML SYSTEM "../../../TDDML.dtd">
+<TDDML>
+  <!-- YOPPORTUNITA_SALES_2_APP (YOPPORT): Opportunita - Sales 2 App; -->
+  <CreateTable schema="SOFTRE" name="YOPPORTUNITA_SALES_2_APP" shortname="YOPPORT">
+    <Column name="ID_AZIENDA" shortname="ID_AZIENDA" type="char" length="3" nullable="no"/>
+    <Column name="STATO" shortname="STATO" type="char" length="1" nullable="no"/>
+    <Column name="R_UTENTE_CRZ" shortname="R_UTENTE_C" type="char" length="20" nullable="yes"/>
+    <Column name="TIMESTAMP_CRZ" shortname="TIMESTAMP_" type="timestamp" nullable="no" default="CURRENT TIMESTAMP"/>
+    <Column name="R_UTENTE_AGG" shortname="R_UTENTE_A" type="char" length="20" nullable="yes"/>
+    <Column name="TIMESTAMP_AGG" shortname="TIMESTAMP0" type="timestamp" nullable="no" default="CURRENT TIMESTAMP"/>
+    <Column name="HASH" shortname="HASH" type="char" length="40" nullable="no"/>
+    <Column name="TITLE" shortname="TITLE" type="varchar" length="50" nullable="yes"/>
+    <Column name="STATUS" shortname="STATUS" type="char" length="1" nullable="no" default="A"/>
+    <Column name="R_ACTIVITY" shortname="R_ACTIVITY" type="char" length="40" nullable="yes"/>
+    <Column name="R_CUSTOMER" shortname="R_CUSTOMER" type="char" length="40" nullable="yes"/>
+    <Column name="DESCRIPTION" shortname="DESCRIPTIO" type="varchar" length="250" nullable="yes"/>
+    <Column name="SUCCESS_RATE" shortname="SUCCESS_RA" type="integer" nullable="yes"/>
+    <Column name="ECONOMIC_VALUE" shortname="ECONOMIC_V" type="decimal" length="19" scale="6" nullable="yes"/>
+    <Column name="ECONOMIC_VALUE_RECURRING" shortname="ECONOMIC_0" type="decimal" length="19" scale="6" nullable="yes"/>
+    <Column name="NOTE" shortname="NOTE" type="varchar" length="1000" nullable="yes"/>
+    <Column name="R_CLIENTE_PTH" shortname="R_CLIENTE_" type="char" length="8" nullable="yes"/>
+    <Column name="R_ATTIVITA" shortname="R_ATTIVITA" type="integer" nullable="yes"/>
+  </CreateTable>
+  <CreateIndex schema="SOFTRE" name="YOPPORTUNITA_S_I01" tabschema="SOFTRE" tabname="YOPPORTUNITA_SALES_2_APP" shortname="YOPPOR_I01" unique="yes">
+    <IndexCol name="ID_AZIENDA" order="Asc"/>
+    <IndexCol name="HASH" order="Asc"/>
+  </CreateIndex>
+  <AlterTable schema="SOFTRE" name="YOPPORTUNITA_SALES_2_APP">
+    <AddPrimaryKey>
+      <PrimaryKey>
+        <ColumnRef name="ID_AZIENDA"/>
+        <ColumnRef name="HASH"/>
+      </PrimaryKey>
+    </AddPrimaryKey>
+  </AlterTable>
+  <Comment>
+    <CommentTable schema="SOFTRE" name="YOPPORTUNITA_SALES_2_APP" text="Opportunita - Sales 2 App">
+      <CommentColumn name="ID_AZIENDA" text="Azienda"/>
+      <CommentColumn name="STATO" text="Stato"/>
+      <CommentColumn name="R_UTENTE_CRZ" text="Utente creazione"/>
+      <CommentColumn name="TIMESTAMP_CRZ" text="Timestamp creazione"/>
+      <CommentColumn name="R_UTENTE_AGG" text="Utente ultima modifica"/>
+      <CommentColumn name="TIMESTAMP_AGG" text="Timestamp ultima modifica"/>
+      <CommentColumn name="HASH" text="Hash"/>
+      <CommentColumn name="TITLE" text="Titolo"/>
+      <CommentColumn name="STATUS" text="Stato"/>
+      <CommentColumn name="R_ACTIVITY" text="Attivita - Sales 2 App"/>
+      <CommentColumn name="R_CUSTOMER" text="Cliente"/>
+      <CommentColumn name="DESCRIPTION" text="Descrizione"/>
+      <CommentColumn name="SUCCESS_RATE" text="Percentuale successo"/>
+      <CommentColumn name="ECONOMIC_VALUE" text="Valore economico"/>
+      <CommentColumn name="ECONOMIC_VALUE_RECURRING" text="Valore economico ricorrente"/>
+      <CommentColumn name="NOTE" text="Note"/>
+      <CommentColumn name="R_CLIENTE_PTH" text="Cliente panthera"/>
+      <CommentColumn name="R_ATTIVITA" text="Attivita - Sales 2 App"/>
+    </CommentTable>
+    <CommentIndex schema="SOFTRE" name="YOPPORTUNITA_S_I01" text="Primary Key"/>
+  </Comment>
+  <Grant schema="SOFTRE" name="YOPPORTUNITA_SALES_2_APP"/>
+</TDDML>

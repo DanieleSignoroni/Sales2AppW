@@ -1,0 +1,3 @@
+function YOpportunitaSales2AppOL(){
+  
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE TDDML SYSTEM "../../../TDDML.dtd">
+<TDDML>
+  <AlterTable schema="SOFTRE" name="YCONN_DESCR">
+    <AddColumn>
+      <Column name="SEQUENZA_LANCIO" shortname="SEQ_LANCIO" type="integer" length="10" nullable="yes"/>
+    </AddColumn>
+  </AlterTable>
+  <Comment>
+    <CommentTable schema="SOFTRE" name="YCONN_DESCR" text="Descrittore connettore">
+      <CommentColumn name="SEQUENZA_LANCIO" text="Sequenza di lancio"/>
+    </CommentTable>
+  </Comment>
+</TDDML>

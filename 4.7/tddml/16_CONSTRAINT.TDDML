@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE TDDML SYSTEM "../../../TDDML.dtd">
+<TDDML>
+  <!-- YOPPORTUNITA_SALES_2_APP (YOPPORT) -->
+  <AlterTable schema="SOFTRE" name="YOPPORTUNITA_SALES_2_APP">
+    <AddConstraint>
+      <Constraint name="Azienda_239102015" refschema="THIP" reftable="AZIENDE_ESTESE" schema="SOFTRE" ondelete="Restrict">
+        <ColumnRef name="ID_AZIENDA"/>
+      </Constraint>
+      <Constraint name="Cliente_1150557815" refschema="THIP" reftable="CLIENTI_VEN" schema="SOFTRE" ondelete="Cascade">
+        <ColumnRef name="ID_AZIENDA"/>
+        <ColumnRef name="R_CLIENTE_PTH"/>
+      </Constraint>
+      <Constraint name="Attivita_183884883" refschema="SOFTRE" reftable="YATTIVITA_SALES_2_APP" schema="SOFTRE" ondelete="Cascade">
+        <ColumnRef name="ID_AZIENDA"/>
+        <ColumnRef name="R_ATTIVITA"/>
+      </Constraint>
+    </AddConstraint>
+  </AlterTable>
+</TDDML>

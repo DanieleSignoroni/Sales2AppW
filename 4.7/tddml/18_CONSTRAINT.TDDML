@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE TDDML SYSTEM "../../../TDDML.dtd">
+<TDDML>
+  <!-- YSETTORI_INSERITI (YSETTOR) -->
+  <AlterTable schema="THIPPERS" name="YSETTORI_INSERITI">
+    <AddConstraint>
+      <Constraint name="Azienda_455863878" refschema="THIP" reftable="AZIENDE_ESTESE" schema="THIPPERS" ondelete="Restrict">
+        <ColumnRef name="ID_AZIENDA"/>
+      </Constraint>
+    </AddConstraint>
+  </AlterTable>
+</TDDML>
